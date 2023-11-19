@@ -8,18 +8,16 @@
 #include<stdlib.h>
 int main()
 {
- struct sockaddr_in sadd={0};
+ struct sockaddr_in sadd;
  struct arpreq myarp={{0}};
  unsigned char *ptr;
- int sd;
+
  sadd.sin_family=AF_INET;
  printf("Enter IP address: ");
  char ip[20];
  scanf("%s", ip);
 
- memcpy(&myarp.arp_pa,&sin,sizeof(myarp.arp_pa));
- strcpy(myarp.arp_dev,"echo");
- int d=socket(AF_INET,SOCK_DGRAM,0);
+
  printf("\nSend ARP request\n");
 
  ptr=&myarp.arp_pa.sa_data[0];
