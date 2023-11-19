@@ -1,35 +1,4 @@
-#include<stdio.h>
-#include<sys/types.h>
-#include<sys/socket.h>
-#include<netdb.h>
-#include<unistd.h>
-#include<arpa/inet.h>
-#include<netinet/in.h>
-
-
-int main(int argc, char* argv[]){
-    int s=socket(AF_INET, SOCK_STREAM,0);
-    char b[1024];
-    struct sockaddr_in sadd;
-    sadd.sin_family=AF_INET;
-    sadd.sin_port=htons(1999);
-    sadd.sin_addr.s_addr=inet_addr("127.0.0.1");
-    socklen_t slen=sizeof(sadd);
-
-    connect(s,(struct sockaddr*)&sadd,slen);
-    recv(s,b,sizeof(b),0);
-    printf("Time %s", b);
-    close(s);
-    return 0;
-
-
-
-    
-}
-
-
-
-/*#include <stdio.h>
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netdb.h>
@@ -57,4 +26,3 @@ int main(int argc, char* argv[])
 	close(s);
 }
 
-*/
