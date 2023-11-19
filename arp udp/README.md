@@ -23,19 +23,4 @@ The program achieves the following technical objectives:
 ## Implementation:
 
 The program utilizes UDP for communication and ARP for address resolution. It first pings the specified client to confirm network connectivity. Then, it sends an ARP request to the network, looks up the ARP cache for the hardware address, and displays the result.
-
-## Code:
-
-```c
-#include <stdio.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <stdlib.h>
-
-int main() {
-    // Code implementation goes here
-    // ...
-
-    return 0;
-}
+ 
