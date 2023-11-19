@@ -1,8 +1,6 @@
 # ARP Implementation using UDP
 
-## Date:
-
-[Enter Date]
+ 
 
 ## Aim:
 
